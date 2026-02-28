@@ -1,0 +1,14 @@
+
+For supervised:
+
+1) predict price
+2) predict accident history
+3) predict days on market
+4) predict ceritfication status
+
+
+For unsupervised:
+
+1) clustering --> ex cluster based on engine size, fuel economy, body...
+--> can find economy car cluster, luxury...
+2) component analysis
