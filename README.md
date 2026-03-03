@@ -44,3 +44,20 @@ This Project requires Python and the following libraries:
 
 Install with: 
 pip instant pandas numpy matplotlib seaborn scipy
+
+---
+
+# Environment Setup
+
+This project can be run using either pip or Conda.
+
+### Using pip
+Create a virtual environment and install dependencies:
+
+pip install -r requirements.txt
+
+### Using Conda
+Create the Conda environment:
+
+conda env create -f environment.yml
+conda activate COMP333_PROJECT_GROUP_O
