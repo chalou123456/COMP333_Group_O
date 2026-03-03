@@ -11,8 +11,36 @@ COMP 333 Winter 2026 Project Group O
 
 # Dataset
 
-The full dataset (10GB) is publicly available on Kaggle:
+We use the **US Used Cars** public dataset from Kaggle.
+The full dataset (9.98GB) is publicly available on Kaggle:
 https://www.kaggle.com/datasets/ananaymital/us-used-cars-dataset
 Due to size constraints, it is not included in submission.
-If the full dataset is downloaded and placed in the project's main folder, the notebook will automatically use it.
-Otherwise, it will run on the included 200k sample.
+If the full dataset is downloaded and placed in the project's root directory, the notebook will automatically use it.
+Otherwise, it will run on the included 200k rows sample.
+
+# How to Reproduce
+
+1. Download the dataset manually from the Kaggle link above.
+2. Extract the CSV file.
+3. Place the CSV file in the project’s root directory (same folder as the notebook).
+
+The notebook automatically checks:
+- If the full dataset (`used_cars_data.csv`) is present, it loads the full dataset.
+- Otherwise, it loads the included `sample_used_cars_data.csv` file for reproducibility.
+
+All analysis, cleaning, visualization and modeling steps are fully reproducible using either the full dataset or the sample dataset.
+
+---
+
+# Dependencies
+
+This Project requires Python and the following libraries:
+
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scipy
+
+Install with: 
+pip instant pandas numpy matplotlib seaborn scipy
