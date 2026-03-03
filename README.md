@@ -41,9 +41,10 @@ This Project requires Python and the following libraries:
 - matplotlib
 - seaborn
 - scipy
+- scikit-learn
 
 Install with: 
-pip instant pandas numpy matplotlib seaborn scipy
+pip install pandas numpy matplotlib seaborn scipy scikit-learn
 
 ---
 
