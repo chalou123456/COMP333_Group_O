@@ -9,6 +9,24 @@ COMP 333 Winter 2026 Project Group O
 - Charlotte Lauzon - **Student ID:** 40285642
 - Ava Samimi - **Student ID:** 40048117
 
+---
+
+# Project Overview
+
+This project predicts the selling price of used vehicles using machine learning. We perform exploratory data analysis (EDA) on the US Used Cars dataset to understand distributions and relationships, then build a baseline linear regression model. The goal is to establish a reproducible pipeline for data cleaning, visualization, and price prediction that can be extended with more advanced models.
+
+---
+
+# Notebook Structure
+
+| Part | Description |
+|------|-------------|
+| **Part 1–2** | Data loading, cleaning pipeline, and preprocessing |
+| **Part 3** | Exploratory Data Analysis — summary statistics, univariate/bivariate visualizations, correlation analysis |
+| **Part 4** | Baseline model — linear regression for price prediction, train/val/test split, evaluation metrics (MAE, RMSE, R², MAPE, MedAE), residual analysis |
+
+---
+
 # Dataset
 
 We use the **US Used Cars** public dataset from Kaggle.
@@ -24,11 +42,27 @@ Otherwise, it will run on the included 200k rows sample.
 2. Extract the CSV file.
 3. Place the CSV file in the project’s root directory (same folder as the notebook).
 
+**Expected filename:** `used_cars_data.csv` in the project root. The notebook also checks `data/raw/used_cars_data.csv`.
+
 The notebook automatically checks:
-- If the full dataset (`used_cars_data.csv`) is present, it loads the full dataset.
+- If the full dataset (`used_cars_data.csv`) is present in the project root or `data/raw/`, it loads the full dataset.
 - Otherwise, it loads the included `sample_used_cars_data.csv` file for reproducibility.
 
 All analysis, cleaning, visualization and modeling steps are fully reproducible using either the full dataset or the sample dataset.
+
+---
+
+# How to Run
+
+1. **Run from the project root** — Open the notebook from the project directory so `os.getcwd()` resolves correctly for data loading.
+2. **Run All** — Use "Run All" (or run cells in order from the top) to execute the full pipeline.
+3. **If you see `ModuleNotFoundError: No module named 'sklearn'`** — Install scikit-learn (`pip install scikit-learn`), then restart the Jupyter kernel (Kernel → Restart) and run the notebook again.
+
+---
+
+# Results Summary
+
+The baseline linear regression achieves **R² ≈ 73%** on train, validation, and test sets, explaining about 73% of price variation. **MAE ≈ $4,200** indicates average prediction error in dollars. The model performs best for mid-range vehicles ($30k–$40k) and tends to underestimate luxury prices.
 
 ---
 
