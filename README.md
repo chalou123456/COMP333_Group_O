@@ -32,9 +32,9 @@ This project predicts the selling price of used vehicles using machine learning.
 We use the **US Used Cars** public dataset from Kaggle.
 The full dataset (9.98GB) is publicly available on Kaggle:
 https://www.kaggle.com/datasets/ananaymital/us-used-cars-dataset
-Due to size constraints, it is not included in submission.
-If the full dataset is downloaded and placed in the project's root directory, the notebook will automatically use it.
-Otherwise, it will run on the included 200k rows sample.
+Due to size constraints, it is not included in the submission.
+The full dataset needs to be downloaded and put in the project's root directory. 
+A trimmed ~1GB dataset is created by reading the full csv file by chunks, and sampling each chunk.
 
 # How to Reproduce
 
@@ -46,9 +46,9 @@ Otherwise, it will run on the included 200k rows sample.
 
 The notebook automatically checks:
 - If the full dataset (`used_cars_data.csv`) is present in the project root or `data/raw/`, it loads the full dataset.
-- Otherwise, it loads the included `sample_used_cars_data.csv` file for reproducibility.
+- If the trim dataset is already in the project's root directory; if not, a trimmed ~1.2 GB dataset is created by reading the full csv file in chunks, and sampling those chunks.
 
-All analysis, cleaning, visualization and modeling steps are fully reproducible using either the full dataset or the sample dataset.
+All analysis, cleaning, visualization and modelling steps are fully reproducible.
 
 ---
 
@@ -57,6 +57,7 @@ All analysis, cleaning, visualization and modeling steps are fully reproducible 
 1. **Run from the project root** — Open the notebook from the project directory so `os.getcwd()` resolves correctly for data loading.
 2. **Run All** — Use "Run All" (or run cells in order from the top) to execute the full pipeline.
 3. **If you see `ModuleNotFoundError: No module named 'sklearn'`** — Install scikit-learn (`pip install scikit-learn`), then restart the Jupyter kernel (Kernel → Restart) and run the notebook again.
+4. Please install all dependencies and environment using pip or conda
 
 ---
 
