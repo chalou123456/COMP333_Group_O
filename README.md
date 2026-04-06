@@ -32,10 +32,13 @@ This project predicts the selling price of used vehicles using machine learning.
 We use the **US Used Cars** public dataset from Kaggle.
 The full dataset (9.98GB) is publicly available on Kaggle:
 https://www.kaggle.com/datasets/ananaymital/us-used-cars-dataset
+Due to size constraints, it is not included in the submission. The full dataset needs to be downloaded and put in the project's root directory. 
+A trimmed ~1GB dataset is created by reading the full csv file by chunks, and sampling each chunk.
 
 **Included in this repo:** `clean_cars.csv` — the cleaned subset used for analysis and modelling. The notebook loads this file **first**, so you can reproduce the pipeline **without** downloading the full Kaggle CSV.
 
-To rebuild from raw data (optional): download the full dataset, place `used_cars_data.csv` in the project root (or `data/raw/`), then run the trim/clean steps in the notebook.
+To rebuild from raw data (optional): download the full dataset, place `used_cars_data.csv` in the project root, then run the trimming/cleaning steps in the notebook from phase 1.
+With `clean_cars.csv`, you can run the notebook from phase 2 without needing the full dataset
 
 # How to Reproduce
 
@@ -52,6 +55,7 @@ To rebuild from raw data (optional): download the full dataset, place `used_cars
 The notebook automatically checks:
 - **`clean_cars.csv`** in the project root (preferred — matches this repo).
 - If the full dataset (`used_cars_data.csv`) is present, it can be used to create a trimmed file by reading the full csv in chunks and sampling those chunks.
+- If the trim dataset is already in the project's root directory; if not, a trimmed ~1.2 GB dataset is created by reading the full csv file in chunks, and sampling those chunks.
 
 All analysis, cleaning, visualization and modelling steps are fully reproducible.
 
