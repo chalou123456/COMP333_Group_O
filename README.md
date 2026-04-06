@@ -1,7 +1,7 @@
 # COMP333_Group_O
 COMP 333 Winter 2026 Project Group O
 
-# Course: **COMP 333 — Final Project Phase 1**
+# Course: **COMP 333 — Final Project Phase 1 and 2**
 **Group:** O
 
 **Names:**
@@ -19,11 +19,20 @@ This project predicts the selling price of used vehicles using machine learning.
 
 # Notebook Structure
 
+**Phase 1**
 | Part | Description |
 |------|-------------|
 | **Part 1–2** | Data loading, cleaning pipeline, and preprocessing |
 | **Part 3** | Exploratory Data Analysis — summary statistics, univariate/bivariate visualizations, correlation analysis |
 | **Part 4** | Baseline model — linear regression for price prediction, train/val/test split, evaluation metrics (MAE, RMSE, R², MAPE, MedAE), residual analysis |
+
+**Phase 2**
+| Part | Description |
+|------|-------------|
+| **Part 1** | Advanced Supervised Learning|
+| **Part 2** | Feature Engineering |
+| **Part 3** | Unsupervised Learning |
+| **Part 4** | Interpretation |
 
 ---
 
@@ -33,7 +42,7 @@ We use the **US Used Cars** public dataset from Kaggle.
 The full dataset (9.98GB) is publicly available on Kaggle:
 https://www.kaggle.com/datasets/ananaymital/us-used-cars-dataset
 Due to size constraints, it is not included in the submission. The full dataset needs to be downloaded and put in the project's root directory. 
-A trimmed ~1GB dataset is created by reading the full csv file by chunks, and sampling each chunk.
+A trimmed ~1.2GB dataset is created by reading the full csv file by chunks, and sampling each chunk.
 
 **Included in this repo:** `clean_cars.csv` — the cleaned subset used for analysis and modelling. The notebook loads this file **first**, so you can reproduce the pipeline **without** downloading the full Kaggle CSV.
 
@@ -66,7 +75,7 @@ All analysis, cleaning, visualization and modelling steps are fully reproducible
 1. **Run from the project root** — Open the notebook from the project directory so `os.getcwd()` resolves correctly for data loading.
 2. **Run All** — Use "Run All" (or run cells in order from the top) to execute the full pipeline.
 3. **If you see `ModuleNotFoundError: No module named 'sklearn'`** — Install scikit-learn (`pip install scikit-learn`), then restart the Jupyter kernel (Kernel → Restart) and run the notebook again.
-4. Please install all dependencies and environment using pip or conda
+4. Please install all dependencies and the environment using pip or conda
 
 ---
 
