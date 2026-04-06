@@ -32,21 +32,26 @@ This project predicts the selling price of used vehicles using machine learning.
 We use the **US Used Cars** public dataset from Kaggle.
 The full dataset (9.98GB) is publicly available on Kaggle:
 https://www.kaggle.com/datasets/ananaymital/us-used-cars-dataset
-Due to size constraints, it is not included in the submission.
-The full dataset needs to be downloaded and put in the project's root directory. 
-A trimmed ~1GB dataset is created by reading the full csv file by chunks, and sampling each chunk.
+
+**Included in this repo:** `clean_cars.csv` — the cleaned subset used for analysis and modelling. The notebook loads this file **first**, so you can reproduce the pipeline **without** downloading the full Kaggle CSV.
+
+To rebuild from raw data (optional): download the full dataset, place `used_cars_data.csv` in the project root (or `data/raw/`), then run the trim/clean steps in the notebook.
 
 # How to Reproduce
+
+**Default (recommended):** Clone or copy this repository and ensure `clean_cars.csv` sits next to the notebook. Run the notebook from the project root; STEP 2 loads the cleaned data automatically.
+
+**From full raw data (optional):**
 
 1. Download the dataset manually from the Kaggle link above.
 2. Extract the CSV file.
 3. Place the CSV file in the project’s root directory (same folder as the notebook).
 
-**Expected filename:** `used_cars_data.csv` in the project root. The notebook also checks `data/raw/used_cars_data.csv`.
+**Expected filename for raw data:** `used_cars_data.csv` in the project root. The notebook also checks `data/raw/used_cars_data.csv`.
 
 The notebook automatically checks:
-- If the full dataset (`used_cars_data.csv`) is present in the project root or `data/raw/`, it loads the full dataset.
-- If the trim dataset is already in the project's root directory; if not, a trimmed ~1.2 GB dataset is created by reading the full csv file in chunks, and sampling those chunks.
+- **`clean_cars.csv`** in the project root (preferred — matches this repo).
+- If the full dataset (`used_cars_data.csv`) is present, it can be used to create a trimmed file by reading the full csv in chunks and sampling those chunks.
 
 All analysis, cleaning, visualization and modelling steps are fully reproducible.
 
