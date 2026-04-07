@@ -43,10 +43,13 @@ The full dataset (9.98GB) is publicly available on Kaggle:
 https://www.kaggle.com/datasets/ananaymital/us-used-cars-dataset
 Due to size constraints, it is not included in the submission. The full dataset needs to be downloaded and put in the project's root directory. 
 A trimmed ~1.2GB dataset is created by reading the full csv file by chunks, and sampling each chunk.
+The trimmed dataset can be downloaded from this Google Drive link:
+https://drive.google.com/file/d/123VgEwJG3XboMTPxlZskOab6yUJKgOor/view?usp=sharing
 
 **Included in this repo:** `clean_cars.csv` — the cleaned subset used for analysis and modelling. The notebook loads this file **first**, so you can reproduce the pipeline **without** downloading the full Kaggle CSV.
 
 To rebuild from raw data (optional): download the full dataset, place `used_cars_data.csv` in the project root, then run the trimming/cleaning steps in the notebook from phase 1.
+`used_cars_trimmed_raw.csv` is the trimmed dataset; it can be placed in the root directory as well for Phase 1
 With `clean_cars.csv`, you can run the notebook from phase 2 without needing the full dataset
 
 # How to Reproduce
