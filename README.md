@@ -75,6 +75,7 @@ To rebuild from raw data: download the full dataset, place `used_cars_data.csv` 
 The notebook automatically checks:
 - If the full dataset (`used_cars_data.csv`) is present, it can be used to create a trimmed file by reading the full csv in chunks and sampling those chunks.
 - If the trim dataset is already in the project's root directory; if not, a trimmed ~1.2 GB dataset is created by reading the full csv file in chunks, and sampling those chunks.
+- If the trimmed dataset is in the project's root directory, the full dataset is not needed
 
 All analysis, cleaning, visualization and modeling steps are fully reproducible.
 
